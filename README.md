@@ -1,71 +1,75 @@
-# vs-stash README
+# vs‑stash
 
-This is the README for your extension "vs-stash". After writing up a brief description, we recommend including the following sections.
+**Stash Selected Files** — a small VS Code extension to pick and stash only the files you want.
+
+---
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- **QuickPick file selection**  
+  Choose from your modified files in the current Git repo via a multi‑select list.  
+  ![QuickPick UI](images/quickpick.png)
 
-For example if there is an image subfolder under your extension project workspace:
+- **Include untracked files (optional)**  
+  After selecting files, you’re prompted “Include untracked files in stash?” so you can decide per run whether to pass `-u`.
 
-\!\[feature X\]\(images/feature-x.png\)
+- **Notifications & error handling**  
+  You’ll get a progress notification while stashing, and clear success or error messages when it’s done.
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+- **Keybinding support**  
+  Assign your own shortcut to `stashFiles.selectAndStash` for 1‑key access.
+
+---
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
+- **Visual Studio Code** v1.50 or later  
+- **Built‑in Git extension** (enabled by default)  
+- **Git CLI** on your PATH
+
+---
 
 ## Extension Settings
 
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
+This extension does not contribute any user‑configurable settings.
 
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
+---
 
 ## Known Issues
 
-Calling out known issues can help limit users opening duplicate issues against your extension.
+- On Windows, paths with spaces or special characters may require additional quoting if you hit odd “pathspec” errors.  
+- If you run into quoting problems, try switching the spawn-based approach in `extension.ts` instead of shell strings.
+
+---
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+### 0.1.0
 
-### 1.0.0
-
-Initial release of ...
-
-### 1.0.1
-
-Fixed issue #.
-
-### 1.1.0
-
-Added features X, Y, and Z.
+- Initial public release  
+- “Stash Selected Files” command with file multi‑pick and untracked‑files prompt
 
 ---
 
 ## Following extension guidelines
 
-Ensure that you've read through the extensions guidelines and follow the best practices for creating your extension.
+Make sure to follow the [VS Code Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines) when contributing or publishing updates.
 
-* [Extension Guidelines](https://code.visualstudio.com/api/references/extension-guidelines)
+---
 
 ## Working with Markdown
 
-You can author your README using Visual Studio Code. Here are some useful editor keyboard shortcuts:
+You can author or preview this README right inside VS Code:
 
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux).
-* Toggle preview (`Shift+Cmd+V` on macOS or `Shift+Ctrl+V` on Windows and Linux).
-* Press `Ctrl+Space` (Windows, Linux, macOS) to see a list of Markdown snippets.
+- **Split editor**: `Ctrl+\` (Windows/Linux) or `Cmd+\` (macOS)  
+- **Toggle preview**: `Shift+Ctrl+V` (Windows/Linux) or `Shift+Cmd+V` (macOS)  
+- **Markdown snippets**: `Ctrl+Space`
+
+---
 
 ## For more information
 
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
+- [VS Code API & Extension Docs](https://code.visualstudio.com/api)  
+- [Markdown Syntax Reference](https://www.markdownguide.org/basic-syntax/)  
 
-**Enjoy!**
+Enjoy stashing exactly what you need! 🎉  
